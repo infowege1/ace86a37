@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 WORKDIR /tmp
 
-RUN apk add --no-cache nano mc wget tzdata && \
+RUN apk add --no-cache wget tzdata && \
 
 # install acestream-engine
    mkdir -p /opt/acestream/ && \
