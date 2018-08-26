@@ -3,7 +3,9 @@ FROM alpine:3.8
 WORKDIR /tmp
 
 RUN apk add --no-cache wget tzdata && \
-
+ pip3 install --no-cache-dir -U \
+	psutil \
+   gevent && \
 # install acestream-engine
    mkdir -p /opt/acestream/ && \
    wget -o - https://sybdata.de/files/public-docs/acestream_3.1.31_webUI_x86.tar.gz && \
