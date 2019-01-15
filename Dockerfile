@@ -1,26 +1,27 @@
-FROM alpine:3.8
+FROM sybdata/py37x
+			
+# install packages 
+RUN \
+ mkdir -p opt/tv && \
+ mkdir -p /mnt/films && \
+ 
+# install aceproxy
+ wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
+ unzip aceproxy.zip -d /opt/tv && \
+ #acestream
+ wget https://sybdata.de/data/acestream/acestream_3.1.33.1_x86_wbUI.tar.gz && \
+ tar -zxvf acestream_3.1.33.1_x86_wbUI.tar.gz && \
+ mv acestream.engine/ /opt/ && \
 
-WORKDIR /tmp
+# cleanup
+ rm -rf acestream_3.1.33.1_x86_wbUI.tar.gz aceproxy.zip
 
-RUN apk add --no-cache wget tzdata && \
-# install acestream-engine
-   mkdir -p /opt/acestream/ && \
-   wget -o - https://sybdata.de/files/public-docs/acestream_3.1.31_webUI_x86.tar.gz && \
-   tar -zxvf acestream_3.1.31_webUI_x86.tar.gz && \
-   mv androidfs /opt/acestream/androidfs && \
-   find /opt/acestream/androidfs/system -type d -exec chmod 755 {} \; && \
-   find /opt/acestream/androidfs/system -type f -exec chmod 644 {} \; && \
-   chmod 755 /opt/acestream/androidfs/system/bin/* /opt/acestream/androidfs/acestream.engine/python/bin/python && \
-   rm -rf /tmp/* 
- # add services
-ADD acestream.start /opt/acestream/acestream.start
-ADD acestream.stop /opt/acestream/acestream.stop
-ADD acestream.conf /opt/acestream/androidfs/acestream.engine/acestream.conf
-ADD start.sh /start.sh
-RUN chmod +x /start.sh
-RUN chmod +x /opt/acestream/acestream.start
-RUN chmod +x /opt/acestream/acestream.stop
+# add local files
+COPY root/ /
+RUN chmod +x /opt/acestream.engine/start.sh
 
-EXPOSE 8621 62062 6878
 
-WORKDIR /  
+# ports and volumes
+EXPOSE 8000 9958 6878 8621 62062
+
+CMD ["/opt/acestream.engine/start.sh"]
