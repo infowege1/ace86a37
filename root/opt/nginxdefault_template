@@ -1,0 +1,14 @@
+server {
+    listen       8101;
+    server_name  localhost;
+
+    location /$1/ {
+        proxy_pass http://127.0.0.1:8100/;
+        proxy_buffering off;
+    }
+    
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
