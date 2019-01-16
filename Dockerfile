@@ -22,6 +22,6 @@ RUN chmod +x /opt/acestream.engine/start.sh
 
 
 # ports and volumes
-EXPOSE 8000 9958 6878 8621 62062
+EXPOSE 8000 6878 8621 62062
 
 CMD ["/opt/acestream.engine/start.sh"]
