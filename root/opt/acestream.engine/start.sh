@@ -1,6 +1,10 @@
 #!/bin/sh
 
-python /opt/tv/HTTPAceProxy-master/acehttp.py >/dev/null 2>&1 &
+/opt/acestream.engine/start_acestream_chroot.sh >/dev/null 2>&1 &
+
+nginx >/dev/null 2>&1 &
+
+cd /opt/acey-master/ && node . >/dev/null 2>&1 &
 
 while true; do
         sleep 600
