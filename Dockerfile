@@ -25,6 +25,6 @@ RUN chmod +x pin.sh
 RUN /opt/pin.sh
 
 # ports and volumes
-EXPOSE 8101 8621 62062
+EXPOSE 8084 8627 62070
 
 CMD ["/opt/acestream.engine/start.sh"]
