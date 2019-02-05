@@ -1,4 +1,4 @@
-version: '2.1'
+
 
 httpaceproxy:
             image: sybdata/ace86a37:aceonly
