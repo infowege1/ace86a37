@@ -1,31 +1,32 @@
-# MAIN_HOST=`/sbin/ifconfig ovs_bond0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'` docker-compose up -d
+version: '2.1'
+services:
 
 httpaceproxy:
-  image: sybdata/ace86a37:aceonly
-  ports:
-   - "8081:8081"
-  networks:
-    ace-network:
- aliases:
-   - httpaceproxy
+            image: sybdata/ace86a37:aceonly
+            ports:
+            - "8081:8081"
+            networks:
+            ace-network:
+            aliases:
+            - httpaceproxy
    
 remotefork:
-  image: coresystem/remotefork
-  ports:
-   - "6878:6878"
-   - "8027:8027"
-   - "8621:8621"
- command: >
-      bash -c "./start.sh ${MAIN_HOST} SZGHqCMt 1800"
- networks:
- ace-network:
- aliases:
-  - remotefork
-  
+          image: coresystem/remotefork
+          ports:
+          - "6878:6878"
+          - "8027:8027"
+          - "8621:8621"
+          command: >
+          bash -c "./start.sh ${MAIN_HOST} SZGHqCMt 1800"
+          networks:
+          ace-network:
+          aliases:
+          - remotefork
+          
 networks:
-  ace-network:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
+        ace-network:
+        driver: bridge
+        ipam:
+        driver: default
+        config:
         - subnet: ${IPV4_NETWORK:-172.22.1}.0/24
