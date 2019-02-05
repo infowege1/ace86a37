@@ -1,13 +1,13 @@
 # MAIN_HOST=`/sbin/ifconfig ovs_bond0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'` docker-compose up -d
 
-HTTPAceProxy:
+httpaceproxy:
   image: sybdata/ace86a37:aceonly
   ports:
    - "8081:8081"
   networks:
     ace-network:
  aliases:
-   - HTTPAceProxy
+   - httpaceproxy
    
 remotefork:
   image: coresystem/remotefork
