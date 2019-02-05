@@ -16,7 +16,7 @@ remotefork:
           - "6878:6878"
           - "8027:8027"
           - "8621:8621"
-          command: bash -c "./start.sh ${MAIN_HOST} SZGHqCMt 1800"
+          command: ./start.sh ${MAIN_HOST} SZGHqCMt 1800
           networks:
           ace-network:
           aliases:
