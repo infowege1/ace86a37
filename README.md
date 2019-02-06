@@ -14,7 +14,7 @@
 
 ### Установка: 
 ```
-1. docker network create -d bridge --subnet=172.22.0.0/16 ace-network
+1. docker network create -d bridge --subnet=172.19.0.0/16 ace-network
 2. docker run -d --net ace-network -p 6878:6878 -p 8621:8621 -p 8027:8027 --name remotefork --restart=always coresystem/remotefork bash -c "./start.sh your_server_ip SZGHqCMt 1800"
 3. docker run -d --net ace-network -p 8081:8081 --name httpaproxy --restart=always sybdata/ace86a37:httpaprpxy
 ```
