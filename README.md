@@ -47,9 +47,9 @@ password ='ReplaceMe'
 ## Дополнительно
 Все каналы AceStream. Вытаскиваются при помощи acestream search:
 * http://ip:8081/torrenttv
-### +++
-http://ip:port/allfon
-http://ip:port/torrent-telik
+## +++
+* http://ip:port/allfon
+* http://ip:port/torrent-telik
 
 #### Лог прокси
 * tail -f -n 0 /tmp/acehttp.log
