@@ -22,6 +22,8 @@
 * your_server_ip - Внешний IP-адрес сервера
 * 1800 - Время очистки кеша acestream в секундах (30 минут)
 
+![httpaproxy1](https://user-images.githubusercontent.com/24189833/52369131-44b56680-2a50-11e9-82f4-a1f3922a4457.png)
+
 ### Настройка HTTPAceProxy
 #### заходим в контейнер:
 ```
