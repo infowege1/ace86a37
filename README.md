@@ -44,10 +44,19 @@ password ='ReplaceMe'
 * http://ip:8000/channels/?group=3&type=m3u
 #### список по группам (расшифровка групп: 1-детские; 2-музыка; 3-фильмы; 4-спорт; 5-общие; 6-познавательные; 7-новостные; 8-развлекательные; 9-взрослые; 10-мужские; 11-региональные; 12-религиозные)
 
-#### Лог движка 
-* tail -f -n 0 /opt/acestream.engine/acestream.log
-
 #### Лог прокси
 * tail -f -n 0 /tmp/acehttp.log
 
 ![918f1a](https://user-images.githubusercontent.com/24189833/41553984-b0c70dd0-7333-11e8-8091-1303fde6e2c3.png)
+
+## Настройка RemoteFork 
+
+### Веб-интерфейс
+
+* RemoteFork: http://your_server_ip:8027/
+* Ace Stream: http://your_server_ip:6878/webui/app/SZGHqCMt/server
+
+### Каналы Торрент-ТВ в формате M3U
+
+http://server_ip:8027/ttv.html
+
