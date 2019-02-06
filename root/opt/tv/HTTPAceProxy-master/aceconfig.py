@@ -115,7 +115,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # Logging configuration
     #
     # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    loglevel = logging.INFO
+    loglevel = logging.DEBUG
     # Log message format
     logfmt = '%(filename)-20s [LINE:%(lineno)-4s]# %(levelname)-8s [%(asctime)s] %(message)s'
     #logfmt = '%(filename)s - %(name)s - %(threadName)s - [LINE:%(lineno)s]# - %(levelname)s - [%(asctime)s] - %(message)s' # for debug
