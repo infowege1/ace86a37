@@ -66,6 +66,7 @@ password ='ReplaceMe'
 
 * RemoteFork: http://your_server_ip:8027/
 * Ace Stream: http://your_server_ip:6878/webui/app/SZGHqCMt/server
+***
 Движок запускается с дополнительным ключом --access-token "some_token" (по умолчанию "access token" генерируется случайным образом при каждом запуске движка). После этого веб-интерфейс будет доступен по ссылке: "http://your_server_ip:6878/webui/app/SZGHqCMt/server". После первоначальной настройки сводящейся в задании пароля, веб-интерфейс будет уже доступен по этой ссылке: "http://your_server_ip:6878/server" 
 
 ### Каналы Торрент-ТВ в формате M3U
