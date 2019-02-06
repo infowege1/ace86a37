@@ -60,12 +60,17 @@ password ='ReplaceMe'
 
 ## Настройка RemoteFork 
 
+![img_0645](https://user-images.githubusercontent.com/24189833/52170358-eedb7880-2748-11e9-817b-63ec339b98fb.jpg)
+
 ### Веб-интерфейс
 
 * RemoteFork: http://your_server_ip:8027/
 * Ace Stream: http://your_server_ip:6878/webui/app/SZGHqCMt/server
+Движок запускается с дополнительным ключом --access-token "some_token" (по умолчанию "access token" генерируется случайным образом при каждом запуске движка). После этого веб-интерфейс будет доступен по ссылке: "http://your_server_ip:6878/webui/app/SZGHqCMt/server". После первоначальной настройки сводящейся в задании пароля, веб-интерфейс будет уже доступен по этой ссылке: "http://your_server_ip:6878/server" 
 
 ### Каналы Торрент-ТВ в формате M3U
 
 http://server_ip:8027/ttv.html
+
+![fork789](https://user-images.githubusercontent.com/24189833/52175940-f2541b80-27ab-11e9-8d6d-36388605bfee.png)
 
