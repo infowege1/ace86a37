@@ -11,7 +11,10 @@
 
 ![ace-network](https://user-images.githubusercontent.com/24189833/53303271-bf5fed80-3868-11e9-89ca-d78438c1093b.png)
 
-
+![1k11](https://user-images.githubusercontent.com/24189833/53304316-15865e00-3874-11e9-91b1-6f132b488b61.png)
+==========================
+![httpaproxy1](https://user-images.githubusercontent.com/24189833/52369131-44b56680-2a50-11e9-82f4-a1f3922a4457.png)
+==========================
 ### Установка: 
 ```
 1. docker network create -d bridge --subnet=172.19.0.0/16 ace-network
@@ -23,8 +26,6 @@
 ### где:
 * your_server_ip - Внешний IP-адрес сервера
 * 1800 - Время очистки кеша acestream в секундах (30 минут)
-
-![httpaproxy1](https://user-images.githubusercontent.com/24189833/52369131-44b56680-2a50-11e9-82f4-a1f3922a4457.png)
 
 ### Настройка HTTPAceProxy
 #### заходим в контейнер:
