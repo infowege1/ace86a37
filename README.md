@@ -46,16 +46,16 @@ password ='ReplaceMe'
 ```
 ### Полная совместимость и поддержка офф. виджета ттв
 ### Для получения плейлиста, используйте ссылки вида:
-* http://ip:8000/channels/?type=m3u
-* http://ip:8000/channels/?group=3&type=m3u
+* http://ip:8081/channels/?type=m3u
+* http://ip:8081/channels/?group=3&type=m3u
 #### список по группам (расшифровка групп: 1-детские; 2-музыка; 3-фильмы; 4-спорт; 5-общие; 6-познавательные; 7-новостные; 8-развлекательные; 9-взрослые; 10-мужские; 11-региональные; 12-религиозные)
 
 ## Дополнительно
 Все каналы AceStream. Вытаскиваются при помощи acestream search:
 * http://ip:8081/torrenttv
 ## +++
-* http://ip:port/allfon
-* http://ip:port/torrent-telik
+* http://ip:8081/allfon
+* http://ip:8081/torrent-telik
 
 #### Лог прокси
 * tail -f -n 0 /tmp/acehttp.log
