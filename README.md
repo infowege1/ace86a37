@@ -25,8 +25,12 @@
 5. docker run -d --net ace-network --ip="172.19.0.5" -p 8101:8101 --name aceyproxy --restart=always sybdata/aceubase:acey 
 ```
 ### где:
+* SZGHqCMt - access-token для доступа в Веб-Интерфейс
 * your_server_ip - Внешний IP-адрес сервера
 * 1800 - Время очистки кеша acestream в секундах (30 минут)
+* 62064 - api-port
+* 6880 - http-port
+* 8624 - port
 
 ### Настройка HTTPAceProxy
 #### заходим в контейнер:
