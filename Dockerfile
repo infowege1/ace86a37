@@ -2,12 +2,13 @@ FROM sybdata/py37x
 			
 # install packages 
 RUN \
- mkdir -p opt/tv && \
- mkdir -p /mnt/films && \
+apk add --no-cache nodejs npm && \
+mkdir -p opt/tv && \
+mkdir -p /mnt/films && \
  
 # install aceproxy
- wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
- unzip aceproxy.zip -d /opt/tv && \
+wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
+unzip aceproxy.zip -d /opt/tv && \
  
 # install aceyproxy
 wget -o - https://github.com/xelaok/acey/archive/master.zip -O aceyproxy.zip && \
@@ -17,7 +18,7 @@ npm i && \
 npm run dist
 
 # cleanup
- rm -rf aceproxy.zip aceyproxy.zip
+rm -rf aceproxy.zip aceyproxy.zip
 
 # add local files
 COPY root/ /
