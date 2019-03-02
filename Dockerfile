@@ -12,7 +12,7 @@ unzip aceproxy.zip -d /opt/tv && \
  
 # install aceyproxy
 wget -O - https://github.com/xelaok/acey/archive/master.zip -O aceyproxy.zip && \
-unzip aceproxy.zip -d /opt/ && \
+unzip aceyproxy.zip -d /opt/ && \
 cd /opt/acey-master/ && \
 npm i && \
 npm run dist && \
