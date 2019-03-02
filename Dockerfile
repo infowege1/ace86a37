@@ -1,13 +1,7 @@
-FROM sybdata/nginx-mainline
+FROM node:alpine
 			
 # install packages
 RUN apk add --no-cache nano wget && \
-	
-# acestream
-mkdir -p /opt/acestream.engine/ && \
-wget -o - https://sybdata.de/data/acestream/acestream_3.1.33.1_x86_wbUI.tar.gz && \
-tar -zxvf acestream_3.1.33.1_x86_wbUI.tar.gz && \
-mv acestream.engine/ /opt/ && \
 
 # install proxy
 wget -o - https://github.com/xelaok/acey/archive/master.zip -O aceproxy.zip && \
@@ -17,14 +11,7 @@ cd /opt/acey-master/ && \
 npm i && \
 npm run dist
 
-# add local files
-COPY root/ /
-RUN chmod +x /opt/acestream.engine/start.sh
-RUN chmod +x /opt/pin.sh
-RUN chmod +x pin.sh
-RUN /opt/pin.sh
-
 # ports and volumes
-EXPOSE 8084 8627 62070
+EXPOSE 8100
 
-CMD ["/opt/acestream.engine/start.sh"]
+CMD ["cd /opt/acey-master/ && node ."]
