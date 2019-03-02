@@ -6,7 +6,7 @@ RUN apk add --no-cache nano wget && \
 # install proxy
 wget -o - https://github.com/xelaok/acey/archive/master.zip -O aceproxy.zip && \
 unzip aceproxy.zip -d /opt/ && \
-rm -rf acestream_3.1.33.1_x86_wbUI.tar.gz && \
+rm -rf aceproxy.zip && \
 cd /opt/acey-master/ && \
 npm i && \
 npm run dist
