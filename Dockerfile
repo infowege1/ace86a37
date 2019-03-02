@@ -15,7 +15,7 @@ npm run dist
 EXPOSE 8100
 
 # add services
-ADD start.sh /start.sh
-RUN chmod +x /start.sh
+ADD start.sh /opt/start.sh
+RUN chmod +x /opt/start.sh
 
-CMD ["./start.sh"]
+CMD ["/opt/start.sh"]
