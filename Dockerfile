@@ -17,5 +17,6 @@ EXPOSE 8100
 # add services
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
+RUN ./start.sh
 
-CMD ["./start.sh"]
+CMD [ "node" ]
