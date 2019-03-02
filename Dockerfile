@@ -14,4 +14,8 @@ npm run dist
 # ports and volumes
 EXPOSE 8100
 
-CMD ["cd /opt/acey-master/ && node ."]
+# add services
+ADD start.sh /start.sh
+RUN chmod +x /start.sh
+
+CMD ["./start.sh"]
