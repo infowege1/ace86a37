@@ -11,7 +11,7 @@ wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O acep
 unzip aceproxy.zip -d /opt/tv && \
  
 # install aceyproxy
-wget -o - https://github.com/xelaok/acey/archive/master.zip -O aceyproxy.zip && \
+wget -O - https://github.com/xelaok/acey/archive/master.zip -O aceyproxy.zip && \
 unzip aceproxy.zip -d /opt/ && \
 cd /opt/acey-master/ && \
 npm i && \
