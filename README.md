@@ -1,6 +1,7 @@
-# HTTPAceProxy
+# HTTPAceProxy + AceY - Ace Stream Proxy
 ==========================
 ### HTTPAceProxy&#174; https://github.com/pepsik-kiev/HTTPAceProxy
+### AceY - Ace Stream Proxy&#174; https://github.com/xelaok/acey
 
 
 
@@ -9,7 +10,7 @@
 
 ==========================
 
-![ace-netf](https://user-images.githubusercontent.com/24189833/53599517-a7110b00-3ba7-11e9-9167-63042c10aa2c.png)
+![ace-netf2](https://user-images.githubusercontent.com/24189833/53686405-da2dd880-3d26-11e9-93fc-6ca0231e5f05.png)
 
 ![1k11](https://user-images.githubusercontent.com/24189833/53304316-15865e00-3874-11e9-91b1-6f132b488b61.png)
 
