@@ -15,7 +15,7 @@ wget -o - https://github.com/xelaok/acey/archive/master.zip -O aceyproxy.zip && 
 unzip aceproxy.zip -d /opt/ && \
 cd /opt/acey-master/ && \
 npm i && \
-npm run dist
+npm run dist && \
 
 # cleanup
 rm -rf aceproxy.zip aceyproxy.zip
