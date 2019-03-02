@@ -18,4 +18,4 @@ EXPOSE 8100
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
 
-CMD [ "node" ]
+CMD ["./start.sh"]
