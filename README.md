@@ -21,7 +21,7 @@
 2. docker run -d --net ace-network --ip="172.19.0.2" -p 8621:8621 -p 8027:8027 --name remotefork --restart=always coresystem/remotefork bash -c "./start.sh your_server_ip SZGHqCMt 1800"
 3. docker run -d --net ace-network --ip="172.19.0.3" -p 8081:8081 --name httpaproxy --restart=always sybdata/ace86a37:httpaproxy
 4. docker run -d --net ace-network --ip="172.19.0.4" -p 8624:8624 --name aceremote --restart=always  sybdata/aceubase:aceonly bash -c "/opt/start.sh SZGHqCMt 62064 6880 8624 1800"
-5. docker run -d --net ace-network --ip="172.19.0.5" -p 8101:8101 --shm-size=3G --name aceyproxy --restart=always sybdata/ace86a37:acey 
+5. docker run -d --net ace-network --ip="172.19.0.5" -p 8100:8100 --shm-size=3G --name aceyproxy --restart=always sybdata/ace86a37:acey 
 ```
 ### где:
 * SZGHqCMt - access-token для доступа в Веб-Интерфейс
