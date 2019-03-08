@@ -8,6 +8,7 @@ wget -o - https://github.com/xelaok/acey/archive/master.zip -O aceproxy.zip && \
 unzip aceproxy.zip -d /opt/ && \
 rm -rf aceproxy.zip && \
 cd /opt/acey-master/ && \
+npm install -g npm && \
 npm i && \
 npm run dist
 
