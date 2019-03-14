@@ -15,7 +15,7 @@ url = 'http://91.92.66.82/trash/ttv-list/as.all.player.m3u'
 
 # Download playlist every N minutes to keep it fresh
 # 0 = disabled
-updateevery = 360
+updateevery = 720
 
 # TV Guide URL
 tvgurl = 'http://epg.do.am/tv.gz'
