@@ -54,8 +54,8 @@ http://172.19.0.4:8624/app/monitor
 
 ## Настройка HTTPAceProxy
 ### уже всё в коробке, ссылки на источник вбиты в соответствующие плагина
-* p2pproxy_plugin не работает по причине недоступности Api
 Все каналы AceStream. Вытаскиваются при помощи acestream search:
+* p2pproxy_plugin не работает по причине недоступности Api
 * http://ip:8081/torrenttv
 ## +++
 * http://ip:8081/allfon
