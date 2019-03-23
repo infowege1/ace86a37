@@ -52,29 +52,9 @@ http://172.19.0.4:8624/app/monitor
 
 ```
 
-### Настройка HTTPAceProxy
-#### заходим в контейнер:
-```
-docker exec -it httpaproxy /bin/sh
-```
-#### редактируем следующее:
-```
-nano /opt/tv/HTTPAceProxy-master/plugins/config/p2pproxy.py
-```
-строчки 17 и 19
-```
-#Insert your email on torrent-tv.ru here
-email = 're.place@me'
-#Insert your torrent-tv account password
-password ='ReplaceMe'
-```
-### Полная совместимость и поддержка офф. виджета ттв
-### Для получения плейлиста, используйте ссылки вида:
-* http://ip:8081/channels/?type=m3u
-* http://ip:8081/channels/?group=3&type=m3u
-#### список по группам (расшифровка групп: 1-детские; 2-музыка; 3-фильмы; 4-спорт; 5-общие; 6-познавательные; 7-новостные; 8-развлекательные; 9-взрослые; 10-мужские; 11-региональные; 12-религиозные)
-
-## Дополнительно
+## Настройка HTTPAceProxy
+### уже всё в коробке, ссылки на источник вбиты в соответствующие плагина
+* p2pproxy_plugin не работает по причине недоступности Api
 Все каналы AceStream. Вытаскиваются при помощи acestream search:
 * http://ip:8081/torrenttv
 ## +++
