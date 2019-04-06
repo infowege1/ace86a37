@@ -115,7 +115,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # Logging configuration
     #
     # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    loglevel = logging.INFO
+    loglevel = logging.DEBUG
     # Log message format
     logfmt = '%(filename)-20s [LINE:%(lineno)-4s]# %(levelname)-8s [%(asctime)s] %(message)s'
     #logfmt = '%(filename)s - %(name)s - %(threadName)s - [LINE:%(lineno)s]# - %(levelname)s - [%(asctime)s] - %(message)s' # for debug
@@ -124,7 +124,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     logdatefmt = '%d.%m %H:%M:%S'
     # Full path to a log file
     # For Windows OS something like that logfile = "c:\\Python27\\log_AceHttp.txt"
-    logfile = 
+    logfile = "/tmp/acehttp.log"
     #
     # This method is used to detect fake requests. Some players send such
     # requests in order to detect the MIME type and/or check the stream availability.
