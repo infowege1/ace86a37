@@ -11,8 +11,8 @@ class PlaylistConfig():
        u'#EXTINF:-1 group-title="{group}" tvg-name="{tvg}" tvg-id="{tvgid}" tvg-logo="{logo}",{name}\n#EXTGRP:{group}\n{url}\n'
 
     # Playlist sorting options.
-    sortByName = False
-    sortByGroup = False
+    sortByName = True
+    sortByGroup = True
 
     # Channel names mapping. You may use this to rename channels.
     m3uchannelnames = dict()
