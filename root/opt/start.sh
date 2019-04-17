@@ -2,10 +2,8 @@
 
 python3 /opt/tv/HTTPAceProxy-master/acehttp.py >/dev/null 2>&1 &
 
-cd /opt/acey-master/ && node . >/dev/null 2>&1 &
-
 while true; do
-        sleep 60000
-        find /tmp/acehttp.log -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
+        sleep 21600
+        cd /opt/acelist/ && php as.php /opt/acelist/playlists/as > /dev/null 2>&1
 done
 
