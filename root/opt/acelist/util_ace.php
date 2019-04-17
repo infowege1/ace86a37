@@ -5,7 +5,7 @@
  // 2 - debug messages
  // 3 - info messages
  // 4 - error messages
- $ACELogLevel=4;
+ $ACELogLevel=1;
  function AceLog($severity,$msg)
  {
     global $ACELogLevel;
