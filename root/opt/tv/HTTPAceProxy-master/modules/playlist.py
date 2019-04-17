@@ -82,7 +82,7 @@ class PlaylistConfig():
     m3ugroupnames['Dokument'] = 'other'
     m3ugroupnames['Israel'] = 'other'
     m3ugroupnames['RO_ _'] = 'other'
-    m3ugroupnames['RO:_'] = 'other'
+    m3ugroupnames['RO: _'] = 'other'
     m3ugroupnames['TV'] = 'other'
     m3ugroupnames['amateur'] = 'other'
     m3ugroupnames['documentaries'] = 'other'
