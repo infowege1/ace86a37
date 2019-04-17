@@ -5,6 +5,7 @@ RUN \
 apk add --no-cache php-cli php-curl php-mbstring php-json && \
 mkdir -p opt/tv && \
 mkdir -p /mnt/films && \
+mkdir -p /opt/acelist/playlists && \
  
 # install aceproxy
 wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
