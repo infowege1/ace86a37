@@ -2,6 +2,7 @@ FROM sybdata/py37x
 			
 # install packages 
 RUN \
+apk add --no-cache php-cli php-curl php-mbstring && \
 mkdir -p opt/tv && \
 mkdir -p /mnt/films && \
  
