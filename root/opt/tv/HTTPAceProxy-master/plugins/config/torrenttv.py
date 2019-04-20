@@ -15,7 +15,7 @@ url = 'https://raw.githubusercontent.com/sybdata/ace86a37/master/acecust.m3u'
 
 # Download playlist every N minutes to keep it fresh
 # 0 = disabled
-updateevery = 0
+updateevery = 360
 
 # TV Guide URL
 tvgurl = 'https://iptvx.one/epg/epg.xml.gz'
