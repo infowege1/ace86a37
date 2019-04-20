@@ -9,12 +9,12 @@ RUN \
  wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
  unzip aceproxy.zip -d /opt/tv && \
  #acestream
- wget https://sybdata.de/data/acestream/acestream_3.1.33.1_x86_wbUI.tar.gz && \
- tar -zxvf acestream_3.1.33.1_x86_wbUI.tar.gz && \
+ wget https://f002.backblazeb2.com/file/acestream/acestream_3.1.37_x86_webUI.tar.gz && \
+ tar -zxvf acestream_3.1.37_x86_webUI.tar.gz && \
  mv acestream.engine/ /opt/ && \
 
 # cleanup
- rm -rf acestream_3.1.33.1_x86_wbUI.tar.gz aceproxy.zip
+ rm -rf acestream_3.1.37_x86_webUI.tar.gz aceproxy.zip
 
 # add local files
 COPY root/ /
@@ -22,6 +22,6 @@ RUN chmod +x /opt/acestream.engine/start.sh
 
 
 # ports and volumes
-EXPOSE 8081 6878 8621 
+EXPOSE 8082 6876 8626 
 
 CMD ["/opt/acestream.engine/start.sh"]
