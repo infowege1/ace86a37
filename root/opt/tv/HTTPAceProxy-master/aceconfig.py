@@ -19,7 +19,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # By default Ace Stream Engine listens only Localhost IP, so if you want to use a running
     # somewhere (remotely) AceEngine - start it  with --bind-all parameter, set acespawn=False
     # and enter your settings below
-    ace = { 'aceHostIP': '172.19.0.2', 'aceAPIport': '62062', 'aceHTTPport': '6878' }
+    ace = { 'aceHostIP': '178.254.30.118', 'aceAPIport': '62062', 'aceHTTPport': '6878' }
     # Ace Stream age parameter (LT_13, 13_17, 18_24, 25_34, 35_44, 45_54,
     # 55_64, GT_65)
     aceage = AceConst.AGE_35_44
