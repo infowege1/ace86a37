@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM alpine
 			
 # install packages
 RUN apk add --no-cache nano wget && \
@@ -13,7 +13,7 @@ npm i && \
 npm run dist
 
 # ports and volumes
-EXPOSE 8100
+EXPOSE 8100 4000
 
 # add services
 ADD start.sh /opt/start.sh
