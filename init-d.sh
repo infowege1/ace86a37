@@ -1,29 +1,40 @@
 #!/bin/sh
+### BEGIN INIT INFO
+# Provides:          astra
+# Required-Start:    $network $syslog $named
+# Required-Stop:     $network $syslog $named
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Astra TV streaming software
+### END INIT INFO
 
-CFGDIR=/etc/astra
-INITD=/etc/init.d/astra
-BINFILE=/usr/bin/astra
-
-if [ $(id -u) != "0" ]; then
-    echo "Необходимо делать эту операцию только из root"
-    exit 1
+if [ -z "$1" ] ; then
+    echo "Usage: $0 [start|stop|restart]"
+    exit 0
 fi
 
-mkdir -p /etc/astra
+PORT="4000"
+APP="astra-$PORT"
+BINFILE="/usr/bin/astra"
+PIDFILE="/var/run/$APP.pid"
+LOGFILE="/var/log/$APP.log"
+CFGFILE="/etc/astra/$APP.conf"
 
-echo "SCRIPT SETUP ASTRA BY artem2135468792580"
-echo "SETUP FREE ASTRA"
-
-wget -q -O $INITD http://cesbo.com/download/astra/scripts/init-d.sh
-chmod +x $INITD
-
-wget -q -O $BINFILE http://cesbo.com/download/astra/4.4.182/free/x86/linux-64bit/astra
-chmod +x $BINFILE
-echo "установлено $($BINFILE -v)"
-
-read -p "запускать астру при загрузке сервера? [y/N] " YN <&2
-if [ -n "$YN" ]; then
-    if [ "$YN" = "y" -o "$YN" = "Y" ]; then
-        update-rc.d astra defaults
+if [ "$1" = "start" ]; then
+    if [ -f $PIDFILE ]; then
+        kill $(cat $PIDFILE)
+        sleep 1
     fi
+    ulimit -n 65536
+    $BINFILE -c $CFGFILE -p $PORT --pid $PIDFILE --log $LOGFILE --daemon
+elif [ "$1" = "stop" ]; then
+    if [ -f $PIDFILE ]; then
+        kill $(cat $PIDFILE)
+    fi
+elif [ "$1" = "restart" ]; then
+    $0 start
+else
+    exec $0
 fi
+
+exit 0
