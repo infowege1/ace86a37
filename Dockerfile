@@ -17,6 +17,8 @@ EXPOSE 8100 4000
 
 # add services
 ADD start.sh /opt/start.sh
+ADD astra.sh /opt/astra.sh
 RUN chmod +x /opt/start.sh
+RUN chmod a+x /opt/astra.sh
 
 CMD ["/opt/start.sh"]
