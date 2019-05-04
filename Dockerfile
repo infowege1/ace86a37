@@ -1,24 +1,6 @@
-FROM node:alpine
-			
-# install packages
-RUN apk add --no-cache nano wget && \
-
-# install proxy
-wget -o - https://github.com/xelaok/acey/archive/master.zip -O aceproxy.zip && \
-unzip aceproxy.zip -d /opt/ && \
-rm -rf aceproxy.zip && \
-cd /opt/acey-master/ && \
-npm install -g npm && \
-npm i && \
-npm run dist
-
-# ports and volumes
-EXPOSE 8100 4000
-
-# add services
-ADD start.sh /opt/start.sh
-ADD astra.sh /opt/astra.sh
-RUN chmod +x /opt/start.sh
-RUN chmod a+x /opt/astra.sh
-
-CMD ["/opt/start.sh"]
+FROM alpine
+COPY license.txt /etc/astra/license.txt
+COPY astra.conf /astra.conf
+RUN wget -O /bin/astra http://cesbo.com/download/astra/$(uname -m)
+RUN chmod +x /bin/astra
+CMD cp /astra.conf /run && /bin/astra --stream -p 4000 -c /run/astra.conf 
