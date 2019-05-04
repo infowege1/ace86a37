@@ -1,4 +1,4 @@
-FROM alpine
+FROM node:alpine
 			
 # install packages
 RUN apk add --no-cache nano wget && \
